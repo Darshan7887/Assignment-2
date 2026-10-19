@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>College Department Portal</title>
+
+  <!-- Link to our external CSS file -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <!-- <nav> is a semantic tag for navigation links -->
+  <nav>
+    <div class="nav-brand">Dept. of Computer Science</div>
+    <ul>
+      <!-- Each link uses #id to jump to a section on the same page -->
+      <li><a href="#home">Home</a></li>
+      <li><a href="#timetable">Timetable</a></li>
+      <li><a href="#marks">Marks</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+ 
+  <section id="home" class="section hero">
+    <h1>Welcome to the CS Department</h1>
+    <p>Your one-stop portal for timetables, results, and feedback.</p>
+  </section>
+
+  <section id="timetable" class="section">
+    <h2>Class Timetable</h2>
+
+    <
+    <table>
+      <!-- <caption> gives the table a title (good for accessibility) -->
+      <caption>Semester 5 – Weekly Schedule</caption>
+
+     
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>9:00 – 10:00</th>
+          <th>10:00 – 11:00</th>
+          <th>11:00 – 12:00</th>
+          <th>1:00 – 2:00</th>
+          <th>2:00 – 3:00</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Monday</td>
+          <td>DBMS</td>
+          <td>OS</td>
+          <td>Networks</td>
+          <td>Lab – DBMS</td>
+          <td>Lab – DBMS</td>
+        </tr>
+        <tr>
+          <td>Tuesday</td>
+          <td>Networks</td>
+          <td>DBMS</td>
+          <td>Web Tech</td>
+          <td>OS</td>
+          <td>Elective</td>
+        </tr>
+        <tr>
+          <td>Wednesday</td>
+          <td>OS</td>
+          <td>Web Tech</td>
+          <td>DBMS</td>
+          <td>Lab – Networks</td>
+          <td>Lab – Networks</td>
+        </tr>
+        <tr>
+          <td>Thursday</td>
+          <td>Web Tech</td>
+          <td>Elective</td>
+          <td>OS</td>
+          <td>Networks</td>
+          <td>DBMS</td>
+        </tr>
+        <tr>
+          <td>Friday</td>
+          <td>Elective</td>
+          <td>OS</td>
+          <td>Networks</td>
+          <td>Lab – Web Tech</td>
+          <td>Lab – Web Tech</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+ 
+  <section id="marks" class="section">
+    <h2>Internal Assessment Marks</h2>
+
+    <table>
+      <caption>Mid-Semester Marks – Sem 5</caption>
+
+      <thead>
+        <tr>
+          <th>Roll No.</th>
+          <th>Student Name</th>
+          <th>DBMS</th>
+          <th>OS</th>
+          <th>Networks</th>
+          <th>Web Tech</th>
+          <!-- colspan merges two columns into one -->
+          <th colspan="2">Total / Grade</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>CS501</td>
+          <td>Aarav Mehta</td>
+          <td>18</td>
+          <td>17</td>
+          <td>19</td>
+          <td>20</td>
+          <td>74</td>
+          <td>A</td>
+        </tr>
+        <tr>
+          <td>CS502</td>
+          <td>Priya Sharma</td>
+          <td>15</td>
+          <td>16</td>
+          <td>14</td>
+          <td>18</td>
+          <td>63</td>
+          <td>B</td>
+        </tr>
+        <tr>
+          <td>CS503</td>
+          <td>Rohit Verma</td>
+          <td>20</td>
+          <td>19</td>
+          <td>20</td>
+          <td>19</td>
+          <td>78</td>
+          <td>A+</td>
+        </tr>
+        <tr>
+          <td>CS504</td>
+          <td>Sneha Patil</td>
+          <td>12</td>
+          <td>14</td>
+          <td>13</td>
+          <td>15</td>
+          <td>54</td>
+          <td>C</td>
+        </tr>
+        <tr>
+          <td>CS505</td>
+          <td>Kiran Joshi</td>
+          <td>17</td>
+          <td>18</td>
+          <td>16</td>
+          <td>17</td>
+          <td>68</td>
+          <td>B+</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+ 
+  <section id="contact" class="section">
+    <h2>Contact / Feedback Form</h2>
+
+    <!--
+      method="post" → data is sent inside the request body (hidden).
+      method="get"  → data is appended to the URL (visible).
+      action="#"    → placeholder; in real use this would be a server URL.
+    -->
+    <form action="#" method="post" class="feedback-form">
+
+      <!-- ---- Full Name ---- -->
+      <div class="form-group">
+        <!-- <label for="name"> links the label to the input with id="name" -->
+        <label for="name">Full Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="e.g. Darshan Patel"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="you@college.edu"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Portal Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter your password"
+          required
+        />
+      </div>
+
+  
+      <div class="form-group">
+        <label class="group-label">Gender</label>
+        <div class="radio-group">
+          <label><input type="radio" name="gender" value="male" required /> Male</label>
+          <label><input type="radio" name="gender" value="female" /> Female</label>
+          <label><input type="radio" name="gender" value="other" /> Other</label>
+        </div>
+      </div>
+
+      <
+      <div class="form-group">
+        <label class="group-label">Subjects of Interest</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="subjects" value="dbms" /> DBMS</label>
+          <label><input type="checkbox" name="subjects" value="os" /> Operating Systems</label>
+          <label><input type="checkbox" name="subjects" value="networks" /> Networks</label>
+          <label><input type="checkbox" name="subjects" value="webtech" /> Web Technology</label>
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <label for="year">Year of Study</label>
+        <!-- <select> creates a dropdown list -->
+        <select id="year" name="year" required>
+          <option value="">-- Select Year --</option>
+          <option value="fy">First Year</option>
+          <option value="sy">Second Year</option>
+          <option value="ty">Third Year</option>
+          <option value="final">Final Year</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="feedback">Your Feedback</label>
+        <!-- <textarea> is a multi-line text input -->
+        <textarea
+          id="feedback"
+          name="feedback"
+          rows="5"
+          placeholder="Write your feedback or query here..."
+          required
+        ></textarea>
+      </div>
+
+  
+      <div class="form-buttons">
+        <!-- type="submit" sends the form data -->
+        <button type="submit">Submit Feedback</button>
+        <!-- type="reset" clears all fields back to default -->
+        <button type="reset" class="btn-reset">Reset</button>
+      </div>
+
+    </form>
+  </section>
+
+  
+  <footer>
+    <p>&copy; 2025 Department of Computer Science &nbsp;|&nbsp; All rights reserved.</p>
+    <p>📍 123 University Road, Mumbai – 400001 &nbsp;|&nbsp; ✉ cs.dept@college.edu</p>
+  </footer>
+
+</body>
+</html>
